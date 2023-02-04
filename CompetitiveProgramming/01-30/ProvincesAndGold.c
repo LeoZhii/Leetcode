@@ -2,11 +2,13 @@
 
 int main(void) {
     // accept input
-    char gold[6], silver[6], copper[6];
-    scanf("%s %s %s", gold, silver, copper);
-    printf("%s %s %s\n", gold, silver, copper);
-    
-    //
+    int gold, silver, copper;
+    scanf("%d %d %d", &gold, &silver, &copper);
+    printf("%d %d %d", gold, silver, copper);
+
+    // write conditionals for each case
+    int total = (gold + silver + copper);
+    printf("%d", total);
 
     return 0;
 }
