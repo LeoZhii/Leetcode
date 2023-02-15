@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+// passed
 
 int main(void) {
     int numerator, denominator;
