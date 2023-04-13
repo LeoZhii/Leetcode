@@ -1,3 +1,6 @@
+// Leo Zhi
+// April 13, 2023
+
 // Create a base class called "Shape" that has two protected member variables, "width" and "height",
 // and two public methods, "setWidth" and "setHeight" that allow the values of width and height to be set.
 // Then, create two derived classes called "Rectangle" and "Triangle".
