@@ -48,6 +48,29 @@ char pop(Stack *stack)
         return stack->data[stack->end--];
     }
 
-    // if there are no more characters in
+    // if there are no more characters in the end, return null character
     return '\0';
+}
+
+bool isValid(char *s)
+{
+    Stack *stack = create();
+
+    for (int i = 0; i < sizeof(s); i++)
+    {
+        if (s[i] == '[' || s[i] == "{" || s[i] == "(")
+        {
+            push(stack, s[i]);
+        }
+        else
+        {
+            if (pop(stack) == '\0')
+            {
+                return false;
+            }
+            else if (pop(stack) == "]" || pop(stack) == "}" || pop(stack) == ")")
+            {
+            }
+        }
+    }
 }
