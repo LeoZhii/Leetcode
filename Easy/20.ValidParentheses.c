@@ -58,18 +58,23 @@ bool isValid(char *s)
 
     for (int i = 0; i < sizeof(s); i++)
     {
+        // if the charcter is an open bracket, push it into the queue
         if (s[i] == '[' || s[i] == "{" || s[i] == "(")
         {
             push(stack, s[i]);
         }
         else
         {
+            // if the character is null, that means a closed bracket encountered an empty array. thus, return false
             if (pop(stack) == '\0')
             {
                 return false;
             }
+            // if the character is a closing bracket
             else if (pop(stack) == "]" || pop(stack) == "}" || pop(stack) == ")")
             {
+                // check if the previous bracket is a closing bracket or a coressponding open bracket
+                // pop
             }
         }
     }
